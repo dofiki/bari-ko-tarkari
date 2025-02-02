@@ -4,15 +4,15 @@
 *{
     margin:0;
     padding:0;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Space Grotesk", "sans-serif";
 }
 
 body{
-    background-color: #0F4C75;
+    background-color: #123524;
 }
 
 .banner{
-    background-color: #1B262C;
+    background-color: #000000;
     color: white;
     height: 4rem;
     display: flex;
@@ -20,11 +20,20 @@ body{
     align-items: center;
     position: sticky;
     top: 0;
+    width: 100vw;
+    z-index: 100;
+    
+}
+
+.navRight{
+    display: flex;
+    gap: 4rem;
 }
 
 .logo{
     cursor: pointer;
     font-family: "Handjet", sans-serif;
+    color: #5bff73;
 }
 
 .logo:hover{
@@ -84,7 +93,7 @@ body{
 .box{
     display: flex;
     flex-direction: column;
-    background-color: #1B262C;
+    background-color: #85A947;
     width: 25rem;
     height: 15rem;
     border-radius: 1rem;
@@ -95,6 +104,8 @@ body{
     padding: 1rem;
     justify-content: space-around;
     align-items: center;
+    background-color: #3E7B27;
+    border-radius: 1rem;
 }
 
 .products{
@@ -115,7 +126,7 @@ body{
 
 .addBtn{
     padding: 1rem;
-    background-color: #3282B8;
+    background-color: #000000;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 1rem;
     color: white;
@@ -123,13 +134,13 @@ body{
 
 .addBtn:hover{
 
-    background-color: #235e86;
+    background-color: #268623;
 }
 
 .sideBarActive {
     display: flex;
     flex-direction: column;
-    background-color: #3F72AF;
+    background-color: #23600d;
     color: white;
     position: fixed;
     top: 4rem;
@@ -173,11 +184,11 @@ body{
 }
 
 .item:hover{
-    background-color: #38669e;
+    background-color: #0d5404;
 }
 
 .delItem{
-    background-color: #5742f9;
+    background-color: #006818;
     border: none;
     outline: none;
     color: white;
@@ -199,7 +210,7 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    background-color: #2d8cff;
+    background-color: #004207;
     border-radius: 0.8rem;
     margin-top: 1rem;
     color: rgb(255, 255, 255);
@@ -210,7 +221,7 @@ body{
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: #5bff73;
+    background-color: #04a31b;
     border: none;
     outline: none;
     color: rgb(0, 0, 0);
@@ -226,4 +237,133 @@ body{
 .empty{
     font-size: 1rem;
     padding: 1rem;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none; /* Removes the underline */
+    color: rgb(255, 255, 255); /* Default color */
+  }
+  
+  .menu a.active {
+    color: rgb(0, 115, 29); /* Highlight the active link */
+  }
+  
+  .menu a:hover{
+    color: #5bff73;
+    transition: 0.1s ease-in;
+  }
+
+  .mv-container{
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .mission, .vision{
+    text-align: center;
+    color: white;
+    background-color: #3E7B27;
+    padding: 4rem;
+    overflow: hidden;
+ 
+  }
+
+  .mission p{
+    padding-top:0.5rem;
+    font-size:1.2rem;
+  }
+
+  .vision p{
+    padding-top:0.5rem;
+    font-size:1.2rem;
+  }
+
+.footer{
+    height: 25rem;
+    width: 100vw;
+    background-color: black;
+}
+
+.ham{
+    display: none;
+}
+
+.hamMenu{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    
+    .mv-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+      }
+    
+      .menu{
+        display: none;
+      }
+
+    .ham{
+        cursor: pointer;
+        border: 1px solid white;
+        width: 3rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .ham:hover{
+        color: #5bff73;
+    }
+
+    .hamMenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color:#23600d;
+        width: 20rem;
+        top: 4rem;
+        right: 0rem;
+        height: 100vh;
+        text-align: center;
+        line-height: 3rem;
+        z-index: 1000;
+    }
+
+    .hamMenu a {
+        text-decoration: none; /* Removes the underline */
+        color: rgb(255, 255, 255); /* Default color */
+      }
+      
+      .hamMenu a:hover{
+        color: #5bff73;
+        transition: 0.1s ease-in;
+      }
+
+}
+
+.aboutUs{
+    font-size: 1.5rem;
+    color: white;
+    padding: 5rem;
+}
+
+.aboutUs > ul >li{
+    text-decoration: none;
+    list-style: none;
+    padding-left: 1rem;
 }

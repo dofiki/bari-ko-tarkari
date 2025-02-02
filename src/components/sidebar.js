@@ -13,14 +13,14 @@ export default function Sidebar({sideBarStatus, productList, onRemove, onClear})
               <div className="item">
                 <p>{index+1}.</p>
                 <h3>{pro.name}</h3>
-                <p>$ {pro.price}</p>
+                <p>Rs. {pro.price}</p>
                 <button className="delItem" onClick={()=>onRemove(pro.id)}>remove</button>
                 </div>
             </div> 
           ))}
     
          {productList.length===0? <div className="empty">empty 🛒</div>: <div className="stats">
-            <h4>Total Amount: $ {totalAmount()}</h4>
+            <h4>Total Amount: Rs. {totalAmount()}</h4>
             <button className="buyBtn" onClick={()=>onClear()}>Buy</button>
           </div>}
         </div>

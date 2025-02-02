@@ -3,7 +3,7 @@ export default function Product({id,name,price,onProduct}){
       <div className="boxImg" style={{backgroundColor:name}} ></div>
       <div className="productMeta">
         <div className="name">{name}</div>
-        <div className="price">${price}</div>
+        <div className="price">Rs. {price} / KG</div>
         <button className="addBtn" onClick={()=>onProduct(id)}>Add to cart</button>
       </div>
     </div>

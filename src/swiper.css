@@ -1,0 +1,35 @@
+.swiper {
+  width: 99vw; /* Adjust as needed */
+  height: 39rem; /* Adjust as needed */
+}
+
+/* Ensure images are responsive and fit within the Swiper slides */
+.swiper-slide img {
+  width: 100%; /* Make the image fill the slide width */
+  height: 100%; /* Make the image fill the slide height */
+  object-fit:cover; /* Ensures the image covers the slide without stretching */
+}
+
+@media (max-width:700px) {
+
+  .swiper {
+    width: 99vw; /* Adjust as needed */
+    height: 20rem; /* Adjust as needed */
+  }
+  .swiper-slide img {
+
+    object-fit:scale-down; 
+  }
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+  color:  #5bff73; /* Change navigation arrows color */
+}
+.swiper-pagination-bullet {
+  background-color: rgb(255, 255, 255); /* Default dot color */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #5bff73; /* Active dot color */
+}
