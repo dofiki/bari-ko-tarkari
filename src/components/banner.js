@@ -11,7 +11,17 @@ export default function Banner({ onSideBar, sideBarStatus, productList }) {
   }, [location.pathname]);
 
   const handleHam = () => {
+    if (sideBarStatus) {
+      onSideBar(); // Close cart if it's open
+    }
     setShowMenu((prev) => !prev); 
+  };
+
+  const handleCart = () => {
+    if (showMenu) {
+      setShowMenu(false); // Close menu if it's open
+    }
+    onSideBar(); // Toggle cart
   };
 
   return (
@@ -30,7 +40,7 @@ export default function Banner({ onSideBar, sideBarStatus, productList }) {
           </Link>
         </div>
 
-        <p className="cartBar" onClick={onSideBar}>
+        <p className="cartBar" onClick={handleCart}>
           {sideBarStatus ? "close" : "cart"}
           {productList.length === 0 ? "" : <span className="badge">{productList.length}</span>}
         </p>
