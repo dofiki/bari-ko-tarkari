@@ -2,16 +2,16 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Banner({ onSideBar, sideBarStatus, productList }) {
-  const location = useLocation(); // Get current route
+  const location = useLocation(); 
   const [activePath, setActivePath] = useState(location.pathname);
-  const [showMenu, setShowMenu] = useState(false); // State for hamburger menu
+  const [showMenu, setShowMenu] = useState(false); 
 
   useEffect(() => {
-    setActivePath(location.pathname); // Update activePath when route changes
+    setActivePath(location.pathname); 
   }, [location.pathname]);
 
   const handleHam = () => {
-    setShowMenu((prev) => !prev); // Toggle menu visibility
+    setShowMenu((prev) => !prev); 
   };
 
   return (

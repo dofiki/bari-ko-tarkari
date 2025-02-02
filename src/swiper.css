@@ -9,8 +9,7 @@
   height: 100%; /* Make the image fill the slide height */
   object-fit:cover; /* Ensures the image covers the slide without stretching */
 }
-
-@media (max-width:700px) {
+@media (max-width:650px) {
 
   .swiper {
     width: 99vw; /* Adjust as needed */
@@ -21,6 +20,22 @@
     object-fit:scale-down; 
   }
 }
+
+@media (max-width:400px) {
+
+  .swiper {
+    width: 99vw; /* Adjust as needed */
+    height: 15rem; /* Adjust as needed */
+  }
+  .swiper-slide img {
+
+    object-fit:scale-down; 
+  }
+}
+
+
+
+
 
 
 .swiper-button-next, .swiper-button-prev {
